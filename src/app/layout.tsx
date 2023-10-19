@@ -18,7 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+
+      <body className={inter.className}>
         <Script
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
@@ -33,8 +34,6 @@ export default function RootLayout({
             });
         `}
         </Script>
-      </head>
-      <body className={inter.className}>
         {children}
         <Analytics />
       </body>
